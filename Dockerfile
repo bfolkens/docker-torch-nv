@@ -28,5 +28,7 @@ ENV LD_LIBRARY_PATH=/root/nccl/lib:$LD_LIBRARY_PATH
 RUN luarocks install nccl
 
 # Install more dev libs
-RUN luarocks install cutorch && \
+RUN luarocks install torch && \
+    luarocks install nn && \
+    luarocks install cutorch && \
     luarocks install cunn
