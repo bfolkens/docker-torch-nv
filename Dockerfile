@@ -2,7 +2,7 @@ FROM nvidia/cuda:8.0-cudnn5-devel-ubuntu14.04
 
 # Install some dep packages
 RUN apt-get update && \
-    apt-get install -y git wget build-essential m4 libtool autoconf && \
+    apt-get install -y git wget build-essential m4 libtool autoconf cmake && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install CUDA repo (needed for cuDNN)
@@ -30,4 +30,3 @@ RUN luarocks install nccl
 # Install more dev libs
 RUN luarocks install cutorch && \
     luarocks install cunn
-
