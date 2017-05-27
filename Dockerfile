@@ -2,7 +2,7 @@ FROM nvidia/cuda:8.0-cudnn6-devel-ubuntu16.04
 
 # Install some dep packages
 RUN apt-get update && \
-    apt-get install -y git wget build-essential m4 libtool autoconf cmake && \
+    apt-get install -y zip git wget build-essential m4 libtool autoconf cmake && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install the nv packages
