@@ -1,5 +1,5 @@
 LOCAL_NAME=torch-nv
-VERSION=cuda8.0-cudnn6-devel-ubuntu16.04
+VERSION=`git rev-parse --abbrev-ref HEAD`
 PUBLIC_NAME=docker-torch-nv
 REPOSITORY=bfolkens
 
